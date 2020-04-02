@@ -6,7 +6,9 @@
       <Description>"Anor Londo Bullet Deleter"</Description>
       <LastState Activated="1"/>
       <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>{DrasticGray
+      <AssemblerScript>{
+DrasticGray
+april 2, 2020
 Neuters Anor Londo enemies}
 [ENABLE]
 {$lua}
