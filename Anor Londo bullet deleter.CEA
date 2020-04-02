@@ -1,5 +1,5 @@
 {DrasticGray, April 12, 2020
-Neuters Anor Londo enemies}
+Neuters Anor Londo enemies, no more deacon fireballs interfering with testing or PvP!}
 [ENABLE]
 {$lua}
 if syntaxcheck then return end
