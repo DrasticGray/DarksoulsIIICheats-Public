@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable>
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1337103702</ID>
+      <Description>"Anor Londo Bullet Deleter"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{DrasticGray
+Neuters Anor Londo enemies}
+[ENABLE]
+{$lua}
+if syntaxcheck then return end
+
+local bullets2Block = {
+1350700,--Irithyllian slave sorcerer's soul arrow
+1410300,--Silver knight's greatarrows
+2250700,--Sullyvahn's beast lightning breath
+2250701,--Sullyvahn's beast lightning breath spread
+3020192,--Giant's ground shockwave
+3110700,--Deep accursed's black spit
+3110710,--Deep accursed's curse gas
+5221700,--Fat deacon's fireball
+5221710,--Fat deacon's force
+5222700,--Tall deacon's fireball
+5223700,--Short deacon's fireball
+}
+
+for i,id in ipairs(bullets2Block) do
+local bullet = Bullet:new("blockedBullet",id)
+      bullet:life(0)
+end
+[DISABLE]
+{$lua}
+paramUtils:restore("blockedBullet")
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+</CheatTable>
